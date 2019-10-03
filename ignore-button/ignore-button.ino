@@ -23,10 +23,10 @@ void setup()
   pinMode(buttonPin, INPUT_PULLUP);
   pinMode(buttonLEDPin, OUTPUT);
   
-  init();
+  setInitialState();
 }
 
-void init() 
+void setInitialState() 
 {
   digitalWrite(gDoorPin, HIGH);
   setButtonLED_ON();
