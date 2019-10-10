@@ -29,7 +29,7 @@ void setup()
 void setInitialState() 
 {
   digitalWrite(gDoorPin, HIGH);
-  setButtonLED_ON();
+  setAvailableIndicator_ON();
   Serial.println("Hi - ready");
 }
 
@@ -38,7 +38,7 @@ void loop()
   if (digitalRead(buttonPin) == LOW)
   {
     Serial.println("button pressed");
-    setButtonLED_OFF();
+    setAvailableIndicator_OFF();
 
     startOpener();
 
@@ -46,16 +46,18 @@ void loop()
     delay(secondsToWait * 1000);
 
     Serial.println("done - ready for more");
-    setButtonLED_ON();
+    setAvailableIndicator_ON();
   }
 }
 
-void setButtonLED_ON() {
+void setAvailableIndicator_ON() {
   digitalWrite(buttonLEDPin, HIGH);
+  digitalWrite(LED_BUILTIN, HIGH);
 }
 
-void setButtonLED_OFF() {
+void setAvailableIndicator_OFF() {
   digitalWrite(buttonLEDPin, LOW);
+  digitalWrite(LED_BUILTIN, LOW);
 }
 
 
