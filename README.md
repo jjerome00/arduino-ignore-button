@@ -19,7 +19,7 @@ The relay has 2 positive and 1 negative for providing the power for triggering t
 * Common - goes to one garage door switch terminal
 * NO (normally open) - goes to the other garage door switch terminal
 
-#### Arduino
+### Arduino
 
 To button LED:
 * `GND` (ground) - goes to LED button
@@ -32,3 +32,13 @@ To button:
 To relay:
 * `5V` - goes to +/S on rely
 * `Digital ~5` - goes to `-` on relay
+
+### Sound   
+
+I added sound February of 2023 using an Adafruit Sound Board.
+
+To board:   
+* `5V` - goes to Vin pin on sound board
+* `GND` - goes to GND pin on sound board
+* `Digital 3` - goes to zero (0) pin on sound board
+
